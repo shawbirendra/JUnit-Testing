@@ -42,7 +42,12 @@ public class DataTest {
 		 * data->(same data that we will get by hitting DB) )
 		 * 
 		 */
+		
+		/**
+		  Consider this as a original DB Data.
+		*/
 		List<Integer> ourExpectedDBData = Stream.of(2, 5).collect(Collectors.toList());
+		
 		when(dsMock.dbData()).thenReturn(ourExpectedDBData);
 		/**
 		 * Here,we calling service method which internally will call DAO method,for DAO
